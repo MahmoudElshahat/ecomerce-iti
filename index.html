@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Home</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" type="text/css">
+        <!-- <link rel="stylesheet" href="css/font-awesome.min.css"> -->
+
+        <link rel="stylesheet" href="css/main.css">
+    </head>
+    <body>
+        <div id="container">
+
+            <div class="header"><!-- Nav bar elements  -->
+              
+                <div class="user" >
+                    <ul>
+                        <li>Welcome <span>userName</span></li>
+                    </ul>
+                </div>
+              
+              
+                <ul>
+                    <!-- <li><a href="#">Welcome</a>// if show with hover
+                      <ul class="dropdown">
+                        <li><a href="#">log out</a></li>
+                        <li><a href="#">Dashboard</a></li>
+                      </ul>
+                    </li> -->
+                    
+                    <li><a href="#"><i class="nav-icon fas fa-tachometer-alt"></i>Dashboard</a></li>
+                    <!-- <li><a href="#"><i class="fa fa-user"></i> Login</a></li> -->
+
+                    <li><a href="#"><i class="fa fa-user"></i> Login</a></li>
+                  </ul>
+            </div>
+            <!-- ======================== Navbar ========================== -->
+            <div class="navbar"><!-- Nav bar elements  -->
+                <ul>
+                    <a href=""> 
+                        <li>Home</li>
+                    </a> 
+                    
+                    <a href="pages/cart.html"> 
+                        <li>Cart</li>
+                    </a> 
+                </ul>
+            </div>
+
+            <!-- ======================== Search ========================== -->
+
+            <div id="search"><!-- Nav bar elements  -->
+                <input type="search" name="search"  placeholder="  what do you need ?">
+                <input type="button" name="Search" value="Search" id="search_btn">
+            </div>
+
+            <div id="banar">
+                <img src="imgs/banar/banner.jpg" alt="">
+            </div>
+ <!-- End section Header  -->
+
+            <div id="categoris">
+                
+                    <div>
+                        <h2>Featured Product</h2>
+                    </div>
+                    <div id="featured">
+                        <ul id="cat_list">
+                             <li onclick="show_products_data(fetch_data_from_storage('products')) ">All</li>
+                            
+                           <!-- <li >Oranges</li>
+                            <li >Fresh Meat</li>
+                            <li >Vegetables</li>
+                            <li >Fastfood</li> -->
+                        </ul> 
+                    </div>
+                <!-- </div> -->
+            </div>
+
+            <!-- ====================== product with images ==================== -->
+            <div id="products_container"> <!--show product here from js --> 
+
+                <!-- <div class="fastfood" id="fastfood"> 
+                        <div class="all_products" id="all_products"> 
+                            <div class="product" id="product"> 
+                                < <img src="imgs/product/product-1.jpg" alt=""> 
+                                <ul >
+                                    <li><a href="#"><i class="fa fa-heart"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-retweet"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
+                                </ul> 
+                            </div> 
+                            <div class="product_name" id="product_name"> 
+                                <h6><a href="#">Crab Pool Security</a></h6>
+                                <h5>$</h5> 
+                            </div> 
+                         </div>
+                </div> 
+            
+                </div>-->
+
+        </div><!-- end div container   -->
+
+        <script src="js/main.js"></script>
+    </body>
+</html>

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Cart</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" type="text/css">
+        <link rel="stylesheet" href="../css/main.css">
+        <link rel="stylesheet" href="../css/cart.css">
+
+    </head>
+    <body>
+        <div id="container">
+            <div class="parent_header">
+            <div class="header">
+                <div class="user" >
+                    <ul>
+                        <li>Welcome <span>userName</span></li>
+                    </ul>
+                </div>
+                <ul>
+                    <li><a href="#">Welcome</a>
+                      <ul class="dropdown">
+                        <li><a href="#">log out</a></li>
+                        <li><a href="#">Dashboard</a></li>
+                      </ul>
+                    </li>
+                    <li><a href="#"><i class="fa fa-user"></i> Login</a></li>
+                  </ul>
+            </div>
+            <!-- ======================== Navbar ========================== -->
+            <div class="navbar"><!-- Nav bar elements  -->
+                <ul>
+                    <a href="../index.html"> 
+                        <li>Home</li>
+                    </a> 
+                    
+                    <a href=""> 
+                        <li>Cart</li>
+                    </a> 
+                </ul>
+            </div>
+
+            <!-- ======================== Search ========================== -->
+
+            <div id="search"><!-- Nav bar elements  -->
+                <input type="search" name="search"  placeholder="  what do you need ?">
+                <input type="button" name="Search" value="Search" id="search_btn">
+            </div>
+
+            <div id="banar">
+                <img src="imgs/banar/banner.jpg" alt="">
+            </div>
+        </div>
+
+        <div class="cart_banar">
+            <img src="../imgs/banar/details-hero.jpg" alt="">
+        </div>
+
+ <!-- End section Header  -->
+<div class="cart__table">
+    <table>
+        <thead>
+            <tr>
+                <th class="shoping__product">Products</th>
+                <th>Price</th>
+                <th>Quantity</th>
+                <th>Total</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="cart__item">
+                    <img src="../imgs/product/product-1.jpg" alt="">
+                    <h5>Vegetable’s Package</h5>
+                </td>
+                <td class="shoping__cart__price">
+                    $55.00
+                </td>
+                <td class="shoping__cart__quantity">
+                    <div class="quantity">
+                        <div class="product-qty">
+                            <span>-</span>
+                            <input type="text" value="1">
+                            <span>+</span>
+                        </div>
+                    </div>
+                </td>
+                <td class="shoping__cart__total">
+                    $110.00
+                </td>
+                <td class="shoping__cart__item__close">
+                    <span class="icon_close"></span>
+                </td>
+            </tr>
+           
+            <tr>
+                <td class="cart__item">
+                    <img src="../imgs/product/product-2.jpg" alt="">
+                    <h5>Vegetable’s Package</h5>
+                </td>
+                <td class="shoping__cart__price">
+                    $55.00
+                </td>
+                <td class="shoping__cart__quantity">
+                    <div class="quantity">
+                        <div class="product-qty">
+                            <input type="text" value="1">
+                        </div>
+                    </div>
+                </td>
+                <td class="shoping__cart__total">
+                    $110.00
+                </td>
+                <td class="shoping__cart__item__close">
+                    <span class="icon_close"></span>
+                </td>
+            </tr>
+
+    <tr class="cart_checkout">
+
+        <td colspan="3">
+            CART TOTAL
+        </td>
+        <td class="shoping__cart__price">
+            <span>$55.00</span>
+        </td>
+    </tr>
+
+        </tbody>
+    </table>
+ 
+</div>
+
+<!-- </div>  end div container -->
+
+    <script src="../js/cart.js" async defer></script>
+</body>
+</html>

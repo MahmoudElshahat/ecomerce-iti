@@ -1,0 +1,112 @@
+.cart__table{
+    width:100%;
+    height:90%;
+    text-align: center;
+    margin: auto;
+}
+thead tr th{
+    padding-bottom:20px;
+    border-bottom:1px solid #ebebeb;
+}
+table tbody{
+    padding:auto;
+  color: #1c1c1c;
+  font-size: 18px;
+}
+.cart_banar img{
+  /* background-image:url('../imgs/banar/details-hero.jpg'); */
+  height:80%; 
+  width:100%;
+  border:1px solid red;
+}
+
+table{
+    /* border:2px solid red; */
+    position: relative;
+    top:10%;
+    left:9%;
+    width:85%;
+    height:80%;
+    margin-top:75px;
+}
+
+
+.cart__item img{
+    width:150px;
+}
+.shoping__product,.cart__item img{
+    float:left;
+}
+
+.product-qty input,.product-qty input span{
+    border:none;
+    text-align: center;
+    background-color:#6c6c6c70;
+    width:48px;
+    height:24px;
+
+}
+
+table tr td{
+    border-bottom: 1px solid rgb(136, 133, 133);
+}
+
+table tr td h5{
+    text-align: center;
+    padding: auto;
+    position: relative;
+    top: 68px;
+    font-weight: 400;
+}
+/* ==================================================================== */
+/* ====================== cart_check ======================= */
+/* .cart_check{
+    width:30%;
+    height:50%;
+    border: 1px solid red;
+    text-align:center;
+    position: relative;
+    left: 10%;
+    background-color: #f5f5f5;
+    /* display: inline; *
+    background: #f5f5f5;
+padding: 30px;
+  padding-top: 30px;
+padding-top: 20px;
+margin-top: 50px;
+} */
+/* .shoping__checkout{
+    border: 1px solid blue;
+    width: 100%;
+    display: block;
+    position: relative;
+    left:0;
+} */
+
+/* .shoping__checkout ul li,.shoping__checkout h5,.cart_price ul li{
+    margin-top: 20px;
+    list-style: none;
+    font-size: 20px;
+} */
+/* .shoping__checkout ul li{
+    position: static;
+    top:-88px;
+    left:334px;
+}
+.shoping__checkout ul li span{
+    position:sticky;
+    top:-24px;
+    left:334px;
+} */
+.cart_checkout{
+    height:50px; 
+    background-color: rgb(190 190 190);
+}
+
+.cart_checkout td{
+    height:80px;
+    font-size: 20px;
+    font-weight: bolder;
+    font-style: normal;
+    letter-spacing: 2px;
+}

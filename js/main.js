@@ -149,7 +149,7 @@ function creat_product_elements(ele){
         ele_h_six_pro_name.append(ele_a_pro_name)
 
         // show data in page.
-        ele_li_pro.innerHTML=`<i class="fa fa-shopping-cart"></i>`
+        ele_li_pro.innerHTML=`<i onclick='add_to_cart(${ele.id}})' class="fa fa-shopping-cart"></i>`
         ele_a_pro_name.innerText=ele.pro_name
         ele_h_five_pro_price.innerText='$ '+ele.pro_price
         ele_img.setAttribute("src","imgs/product/"+ele.pro_image);
@@ -211,15 +211,64 @@ function filter_product(categorie_id){
 // ======================================================================================
 // ==============    Add to cart             ==================================
 // ======================================================================================
-function add_cart(pri_id){
+users=[{
+        user_name:'khalid',
+        email:'example@gmail.com',
+        user_id:70
+}]
+
+document.cookie=`users=${JSON.stringify(users)}`
+
+
+
+function add_to_cart(pr_id)
+{
     
+   var get_cookie=getCookie('users');
+
+   var parse_data=JSON.parse(get_cookie)
+
+   parse_data.forEach((ele)=>{
+
+        var usr_mail= ele.email
+
+        var cart_dat=[
+            {
+                pro_id:pr_id,
+
+                user_email:usr_mail
+
+            }
+        ]
+        
+        store_data_in_storage('cart',cart_dat)
+
+})
+
 
 }
-
+// add_to_cart()
 // ======================================================================================
-// ==============                        ==================================
+// ==============       get cookie                 ==================================
 // ======================================================================================
+function getCookie(name) {
+    var nameEQ = name + "=";
 
+    var ca = document.cookie.split(';');
+
+    // console.log(ca);
+
+    for(var i=0;i < ca.length;i++) {
+
+        var c = ca[i];
+
+        while (c.charAt(0)==' ') c = c.substring(1,c.length);
+
+        if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+        
+    }
+    return null;
+}
 
 // ======================================================================================
 // ==============                        ==================================

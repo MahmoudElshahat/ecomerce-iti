@@ -195,6 +195,10 @@ body{
 #product ul li{ /* show icone */
     display: none;
 }
+#all_products:hover #product ul li{ /* show icone */
+    display: inline;
+    color:blue;
+}
 
 #all_products div{
     text-align: center;

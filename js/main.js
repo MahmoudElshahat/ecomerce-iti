@@ -122,8 +122,8 @@ function creat_product_elements(ele){
 
         // creat element img & ul & li 
         var ele_img=document.createElement('img')
-        var ele_ul=document.createElement('ul')
-        var ele_li=document.createElement('li')
+        var ele_ul_pro=document.createElement('ul')
+        var ele_li_pro=document.createElement('li')
 
         // creat element h6 for product name & h5 for price name 
         var ele_h_six_pro_name=document.createElement('h6')
@@ -136,19 +136,20 @@ function creat_product_elements(ele){
 
         div_fastfood.append(div_all_products)// append second child div
 
-        div_all_products.append(div_product,div_product_name)// append third & fourth child div
+        div_all_products.append(div_product , div_product_name)// append third & fourth child div
 
-        div_product.append(ele_img,ele_ul)// append element img & ul in child div product
+        div_product.append(ele_img , ele_ul_pro)// append element img & ul in child div product
 
-        div_product_name.append(ele_h_six_pro_name,ele_h_five_pro_price)
+        div_product_name.append(ele_h_six_pro_name , ele_h_five_pro_price)
 
-        ele_ul.append(ele_li)
+        ele_ul_pro.append(ele_li_pro)
     
         ele_h_six_pro_name.append(ele_a_pro_name)
 
         ele_h_six_pro_name.append(ele_a_pro_name)
 
-        // show data in page
+        // show data in page.
+        ele_li_pro.innerHTML=`<i class="fa fa-shopping-cart"></i>`
         ele_a_pro_name.innerText=ele.pro_name
         ele_h_five_pro_price.innerText='$ '+ele.pro_price
         ele_img.setAttribute("src","imgs/product/"+ele.pro_image);
@@ -163,7 +164,7 @@ function show_products_data(arr_data){
     arr_data.forEach(ele=>{ creat_product_elements(ele)})
 
 }//end function
-
+show_products_data(fetch_data_from_storage('products'))
 
 // ======================================================================================
 // ==============   creat categorie name list elements    ==================================
@@ -196,22 +197,24 @@ show_categorie_data(fetch_data_from_storage('categories'))
 
 function filter_product(categorie_id){
 
-//         var div_products_container=document.getElementById('products_container')
-//         if( div_products_container.style.display='block'){
-//             div_products_container.style.display='none'
-//             var products=fetch_data_from_storage('products')
-//             var filterd_data= products.filter(ele=>categorie_id==ele.cat_id)
-//             filterd_data.forEach(ele=>creat_product_elements(ele))
-//         }else{
-//             div_products_container.style.display='none'
-//         }
-    
+        var div_products_container=document.getElementById('products_container')
+        if( div_products_container.style.display='block'){
+            div_products_container.style.display='none'
+            var products=fetch_data_from_storage('products')
+            var filterd_data= products.filter(ele=>categorie_id==ele.cat_id)
+            filterd_data.forEach(ele=>creat_product_elements(ele))
+        }else{
+            div_products_container.style.display='none'
+        }
 }
 
 // ======================================================================================
-// ==============                        ==================================
+// ==============    Add to cart             ==================================
 // ======================================================================================
+function add_cart(pri_id){
+    
 
+}
 
 // ======================================================================================
 // ==============                        ==================================

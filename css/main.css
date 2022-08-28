@@ -164,8 +164,14 @@ body{
     width:100%;
 
 }
-#banar img{
-    background-size:contain;
+#banar{
+    background-image:url(../imgs/banar/banner-6.jpg);
+    background-repeat:no-repeat;
+    background-size:cover;
+   
+    width:100%;
+    height:450px;
+    margin-bottom:40px;
 }
 
 /* =============================================== */
@@ -234,6 +240,13 @@ div #all_products{
     font-weight: 400;
 
 }
+
+#product img{
+    width:270px;
+    height:270px;
+    background-size: cover;
+}
+
 
 /* =============================================== */
 /* =========             ============= */

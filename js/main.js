@@ -2,7 +2,7 @@
 var my_products=[
     {
         id:1,
-        pro_name:'banaa',
+        pro_name:'Mobile-1',
         pro_price:55,
         pro_image:'product-1.jpg',
         // pro_categori:'fruits',
@@ -11,31 +11,144 @@ var my_products=[
 
     {
         id:2,
-        pro_name:'apple',
+        pro_name:'Mobile-2',
         pro_price:66,
         pro_image:'product-2.jpg',
+        // pro_categori:'fruits',
+        cat_id:12
+        
+    },
+
+    {
+        id:3,
+        pro_name:'Mobile-3',
+        pro_price:77,
+        pro_image:'product-3.jpg',
+        // pro_categori:'fruits',
+        cat_id:12
+    },
+    {
+        id:4,
+        pro_name:'Mobile-4',
+        pro_price:99,
+        pro_image:'product-4.jpg',
+        // pro_categori:'fruits',
+        cat_id:12
+        
+    },
+
+    // =============================
+    {
+        id:5,
+        pro_name:'laptop-1',
+        pro_price:55,
+        pro_image:'product-8.jpg',
+        // pro_categori:'fruits',
+        cat_id:13
+    },
+
+    {
+        id:6,
+        pro_name:'laptop-2',
+        pro_price:66,
+        pro_image:'product-9.jpg',
         // pro_categori:'fruits',
         cat_id:13
         
     },
 
     {
-        id:3,
-        pro_name:'meshmesh',
+        id:7,
+        pro_name:'laptop-3',
         pro_price:77,
-        pro_image:'product-3.jpg',
+        pro_image:'product-10.jpg',
+        // pro_categori:'fruits',
+        cat_id:13
+    },
+    {
+        id:8,
+        pro_name:'laptop-4',
+        pro_price:99,
+        pro_image:'product-11.jpg',
+        // pro_categori:'fruits',
+        cat_id:13
+        
+    },
+    // =============== tablet===============
+    {
+        id:9,
+        pro_name:'Tablet-1',
+        pro_price:55,
+        pro_image:'product-18.jpg',
+        // pro_categori:'fruits',
+        cat_id:14
+    },
+
+    {
+        id:10,
+        pro_name:'Tablet-2',
+        pro_price:66,
+        pro_image:'product-19.jpg',
+        // pro_categori:'fruits',
+        cat_id:14
+        
+    },
+
+    {
+        id:11,
+        pro_name:'Tablet-3',
+        pro_price:77,
+        pro_image:'product-20.jpg',
         // pro_categori:'fruits',
         cat_id:14
     },
     {
-        id:4,
-        pro_name:'watermelon',
+        id:12,
+        pro_name:'Tablet-4',
         pro_price:99,
-        pro_image:'product-4.jpg',
+        pro_image:'product-21.jpg',
+        // pro_categori:'fruits',
+        cat_id:14
+        
+    },
+     // =============== samrt watch===============
+     {
+        id:13,
+        pro_name:'samert Watch-1',
+        pro_price:55,
+        pro_image:'product-24.jpg',
+        // pro_categori:'fruits',
+        cat_id:15
+    },
+
+    {
+        id:14,
+        pro_name:'samert Watch-2',
+        pro_price:66,
+        pro_image:'product-25.jpg',
+        // pro_categori:'fruits',
+        cat_id:15
+        
+    },
+
+    {
+        id:15,
+        pro_name:'samert Watch-3',
+        pro_price:77,
+        pro_image:'product-26.jpg',
+        // pro_categori:'fruits',
+        cat_id:15
+    },
+    {
+        id:16,
+        pro_name:'samert Watch-4',
+        pro_price:99,
+        pro_image:'product-27.jpg',
         // pro_categori:'fruits',
         cat_id:15
         
     }
+
 ]
 
 // =============================================
@@ -46,23 +159,23 @@ var my_categrie=[
     
   
     {
-        cat_name:"Oranges ",
+        cat_name:"Moble-Phone ",
         cat_img:"cat-1.jpg",
         id:12
     },
 
     {
-        cat_name:"Fresh Meat",
+        cat_name:"Laptop",
         cat_img:"cat-2.jpg",
         id:13
     },
     {
-        cat_name:"Vegetables ",
+        cat_name:"Tablet",
         cat_img:"cat-3.jpg",
         id:14
     },
     {
-        cat_name:"Fastfood",
+        cat_name:"Samrt-Watch",
         cat_img:"cat-4.jpg",
         id:15
     },
@@ -104,7 +217,7 @@ function creat_product_elements(ele){
 
         // creat div Elements for product 
         var div_products_container=document.getElementById('products_container')
-        div_products_container.style.display='block'
+        // div_products_container.style.display='none'
         var  div_fastfood=document.createElement('div')
         div_fastfood.setAttribute("id","fastfood");
         div_fastfood.setAttribute("class","fastfood");
@@ -112,7 +225,6 @@ function creat_product_elements(ele){
         var  div_all_products=document.createElement('div')
         div_all_products.setAttribute("id","all_products");
         div_all_products.setAttribute("class","all_products");
-
 
         var div_product=document.createElement('div')
         div_product.setAttribute("id","product");
@@ -122,7 +234,9 @@ function creat_product_elements(ele){
 
         // creat element img & ul & li 
         var ele_img=document.createElement('img')
+        // ele_img.style.display='none'
         var ele_ul_pro=document.createElement('ul')
+        // ele_ul_pro.style.display='none'
         var ele_li_pro=document.createElement('li')
 
         // creat element h6 for product name & h5 for price name 
@@ -149,7 +263,7 @@ function creat_product_elements(ele){
         ele_h_six_pro_name.append(ele_a_pro_name)
 
         // show data in page.
-        ele_li_pro.innerHTML=`<i onclick='add_to_cart(${ele.id}})' class="fa fa-shopping-cart"></i>`
+        ele_li_pro.innerHTML=`<i onclick='add_to_cart(${ele.id})' class="fa fa-shopping-cart"></i>`
         ele_a_pro_name.innerText=ele.pro_name
         ele_h_five_pro_price.innerText='$ '+ele.pro_price
         ele_img.setAttribute("src","imgs/product/"+ele.pro_image);
@@ -159,12 +273,20 @@ function creat_product_elements(ele){
 // ================== show Data to user page  ===========================================
 // ======================================================================================
 
-function show_products_data(arr_data){
+function show_products_data(products_data){
     
-    arr_data.forEach(ele=>{ creat_product_elements(ele)})
+            var div_products_container=document.getElementById('products_container')
+            div_products_container.innerHTML=''
+
+            var pro_data=fetch_data_from_storage(products_data)
+
+            pro_data.forEach(elett=>{
+                creat_product_elements(elett)
+            })
+
 
 }//end function
-show_products_data(fetch_data_from_storage('products'))
+show_products_data('products')
 
 // ======================================================================================
 // ==============   creat categorie name list elements    ==================================
@@ -197,15 +319,18 @@ show_categorie_data(fetch_data_from_storage('categories'))
 
 function filter_product(categorie_id){
 
-        var div_products_container=document.getElementById('products_container')
-        if( div_products_container.style.display='block'){
-            div_products_container.style.display='none'
-            var products=fetch_data_from_storage('products')
-            var filterd_data= products.filter(ele=>categorie_id==ele.cat_id)
-            filterd_data.forEach(ele=>creat_product_elements(ele))
-        }else{
-            div_products_container.style.display='none'
-        }
+       
+    var div_products_container=document.getElementById('products_container')
+    div_products_container.innerHTML=''
+
+    var pro_data=fetch_data_from_storage('products')
+
+    var filterd_data= pro_data.filter(elet=>elet.cat_id==categorie_id)
+
+    filterd_data.forEach(elett=>{
+        creat_product_elements(elett)
+    })
+  
 }
 
 // ======================================================================================
@@ -217,35 +342,27 @@ users=[{
         user_id:70
 }]
 
-document.cookie=`users=${JSON.stringify(users)}`
+// document.cookie=`users=${JSON.stringify(users)}`
 
+function add_to_cart(pr_id){
 
+                    var qty=1;
+                    var cart_data=[{
+                        pro_id:pr_id,
+                        quntity:qty
+                    }]
 
-function add_to_cart(pr_id)
-{
-    
-   var get_cookie=getCookie('users');
-
-   var parse_data=JSON.parse(get_cookie)
-
-   parse_data.forEach((ele)=>{
-
-        var usr_mail= ele.email
-
-        var cart_dat=[
-            {
-                pro_id:pr_id,
-
-                user_email:usr_mail
-
-            }
-        ]
-        
-        store_data_in_storage('cart',cart_dat)
-
-})
-
-
+                    var stored_cart_data=fetch_data_from_storage('carts')
+                            
+                    if(stored_cart_data===null){
+                        
+                        store_data_in_storage('carts',cart_data)
+                    }else{
+                        stored_cart_data.push(cart_data)
+                        store_data_in_storage('carts',stored_cart_data)
+                    }
+       
+                            
 }
 // add_to_cart()
 // ======================================================================================

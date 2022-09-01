@@ -15,8 +15,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/fontawesome.min.css" integrity="sha512-R+xPS2VPCAFvLRy+I4PgbwkWjw1z5B5gNDYgJN5LfzV4gGNeRQyVrY7Uk59rX+c8tzz63j8DeZPLqmXvBxj8pA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- <link rel="stylesheet" href="css/font-awesome.min.css"> -->
 
-    <link rel="stylesheet" href="css/main.css">
-    <!-- <link rel="stylesheet" href="admin/css/style.css"> -->
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/singleproduct.css">
 
 </head>
 
@@ -64,8 +64,8 @@
             <!-- Nav bar elements  -->
 
             <div class="logo">
-                <a href="index.html" ><h2>Logo</h2></a>
-               </div>
+               <a><img> Logo</a>
+            </div>
 
             <div class="menu">
                 <ul class="menu-item">
@@ -85,102 +85,47 @@
                     
                     <!-- <input type="button" name="Search" value="Search" id="search_btn"> -->
                         <span id="vistorBlock">
-                            <li><a href="register.html">Register</a></li>
+                            <li><a href="../register.html">Register</a></li>
                             <!-- <li><a href="./admin/login.html">Login as Admin</a></li> -->
-                            <li><a href="./login.html"> Login</a></li>
+                            <li><a href="../login.html"> Login</a></li>
                         </span>
                     <li>
-                        <input  type="text" id="search" value=""   name="search" 
+                        <input id="search" type="search" name="search" 
                         placeholder="  what do you need ?">
-                        <input type="button" value="search" onclick="searchPage()">
-                       <!-- ============ search ============= -->
-                      
-<!-- ======================================================= -->
                     </li>
-                    <!-- id="search" -->
+
                 </ul>
         </div>
     </nav>
         </div>
-        <!-- ======================== Navbar ========================== -->
-        <!-- <div class="navbar">
-                <ul>
-                    <a href=""> 
-                        <li>Home</li>
-                    </a> 
-               
-                </ul>
-            </div> -->
+       
 
-        <!-- ======================== Search ========================== -->
-
-
-
-     
-        <div id="slider">
-           
-            <span onclick="next()" class="left-icon">
-                <i class="fa-solid fa-circle-chevron-left"></i></span>
-            <span onclick="pre()" class="rith-icon"><i class="fa-solid fa-circle-chevron-right"></i></span>
-            <img src="">
-         
-           
-          </div>
-        <!-- End section Header  -->
-          <hr>
-    <section id="productByCategory">
-        <div id="categoris">
-            <div>
-                <h2>Products By Category</h2>
-            </div>
-            <div id="featured">
-                <ul id="cat_list">
-                    <li onclick="show_products_data('products','products_container')">All</li>
-                </ul>
-            </div>
+    <section id="single-product">
+        <div class="imge">
+                <img id="sigle-imge" src="" alt="">
         </div>
 
-        <!-- ====================== product with images ==================== -->
-        <div id="products_container" class="products_container">
-            <!--show product here from js -->
-        
-        </div><!-- end div container   -->
+        <div class="product-details">
+
+            <h2 id="name"></h2><br>
+
+            <span id="rate"></span><br>
+
+            <h3>price: <span id="price"> $ <del id="sale">$ </del> </span> </h3><br>
+
+            <h3>Quntity: <span  id="quntity"> </span></h3><br>
+
+            <h3>Category: <span  id="categorie"></span></h3><br>
+
+            <h3> Description:</h3><br>
+            <dt id="descr"></dt>
+
+        </div>
+      
    
     </section>
         
-        <section id="productsBySale">
-            <h2>Sale Products</h2>
-            <img class="saleobanner" src="./images/shop14_home_parallax1.png" alt="">
-
-                <div id="productsContainerBySale" class="products_container">
-
-                    
-                </div>
-            
-            
-        </section>
-        <section id="productsByFeatured">
-            <h2>Featured products</h2>
-            <div id="productsContainerByFeatured" class="products_container">
-
-            </div>
-
-        </section>
-        <section class="ShoplessSection">
-                <div class="decShoplessSection">
-                    <h2>Shop now for less</h2>
-                    <br><br>
-                    <p>There are only a few smartwatches that are worth your money. Find the one that's just for you right here.</p>
-                    <button class="btnShopLess">View Products</button>
-                </div>
-        </section>
-        <div id="productsByRecent">
-            <h2>Recent products</h2>
-            <div id="productsContainerByRecent" class="products_container">
-
-            </div>
-
-        </div>
+ 
         <br> <br> <br>
     
         <footer id="footer">
@@ -220,8 +165,9 @@
         </div>
     </footer>
         <script src="js/main.js"></script>
-        <script src="login.js"></script>
-        
+        <script src="../login.js"></script>
+        <script src="../js/singleproduct.js"></script>
+        <script type=""></script>
 
 </body>
 

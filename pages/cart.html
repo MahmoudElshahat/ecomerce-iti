@@ -7,6 +7,10 @@
         <title>Cart</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"
+        type="text/css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/fontawesome.min.css" integrity="sha512-R+xPS2VPCAFvLRy+I4PgbwkWjw1z5B5gNDYgJN5LfzV4gGNeRQyVrY7Uk59rX+c8tzz63j8DeZPLqmXvBxj8pA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" type="text/css">
         <link rel="stylesheet" href="../css/main.css">
         <link rel="stylesheet" href="../css/cart.css">
@@ -14,50 +18,95 @@
     </head>
     <body>
         <div id="container">
-            <div class="parent_header">
-            <div class="header">
-                <div class="user" >
-                    <ul>
-                        <li>Welcome <span>userName</span></li>
-                    </ul>
+            <div  id= 'header' class="header">
+
+                <div class="header-top">
+                    <div class="left-top">
+                        <div class="socials">
+                            <a clas="socials-item" href="#" title="facebook">
+                                <i class="fa-brands fa-facebook-f"></i>
+                            </a>
+                            <a clas="socials-item" href="#" title="Twitter">
+                                <i class="fa-brands fa-twitter"></i>
+                            </a>
+                            <a clas="socials-item" href="#" title="Instagram">
+                                <i class="fa-brands fa-instagram"></i>
+                            </a>
+                            <a clas="socials-item" href="#" title="Pinterest">
+                                <i class="fa-brands fa-pinterest"></i>
+                            </a>
+                        </div>
+                          
+                    </div>
+                    <div class="right-top">
+                        <div class="contact-info">
+                            <label> Email:</label>
+                            <a clas="contact-item" href="mailto:mohamedmahmoudeg.com" title="mail">
+                              
+                               info@mohamedmahmoudeg.com
+                            </a>
+                            <label>Phone:</label>
+                            <a clas="contact-item" href="tel:01003209935" title="phone">
+                                
+                                01003209935
+                             </a>
+                           
+                        </div>
+                          
+                    </div>
+    
                 </div>
-                <ul>
-                    <li><a href="#">Welcome</a>
-                      <ul class="dropdown">
-                        <li><a href="#">log out</a></li>
-                        <li><a href="#">Dashboard</a></li>
-                      </ul>
-                    </li>
-                    <li><a href="#"><i class="fa fa-user"></i> Login</a></li>
-                  </ul>
+            <nav>
+                <!-- Nav bar elements  -->
+    
+                <div class="logo">
+                    <a href="../index.html" ><h2>Logo</h2></a>
+                </div>
+    
+                <div class="menu">
+                    <ul class="menu-item">
+                        <li >
+                            <a href="/" >
+                                 Home
+                             </a>
+                        </li>
+                        <li class="d-none" id="myCart">
+                            <a href="./cart.html" >
+                                 <i class="fa fa-shopping-cart"></i> myCart
+                             </a>
+                        </li>
+                        <!-- Nav bar elements  -->
+                       
+                          <li> <span id="userNameIndex" class="d-none"></span></li>
+                         <li>
+                            <a href="#">
+                                 <span id="IndexLogout" class="d-none userlogout">Logout</span>
+                                 </a>
+                        </li>
+                        
+                        
+                 
+                        <!-- <input type="button" name="Search" value="Search" id="search_btn"> -->
+                            <span id="vistorBlock">
+                                <li><a href="register.html">Register</a></li>
+                                <!-- <li><a href="./admin/login.html">Login as Admin</a></li> -->
+                                <li><a href="./login.html"> Login</a></li>
+    
+                            </span>
+                       
+                        <li>
+                            <!-- <input id="search" type="search" name="search" 
+                            placeholder="  what do you need ?"> -->
+                        </li>
+    
+                    </ul>
             </div>
-            <!-- ======================== Navbar ========================== -->
-            <div class="navbar"><!-- Nav bar elements  -->
-                <ul>
-                    <a href="../index.html"> 
-                        <li>Home</li>
-                    </a> 
-                    
-                    <a href=""> 
-                        <li>Cart</li>
-                    </a> 
-                </ul>
+        </nav>
             </div>
-
-            <!-- ======================== Search ========================== -->
-
-            <div id="search"><!-- Nav bar elements  -->
-                <input type="search" name="search"  placeholder="  what do you need ?">
-                <input type="button" name="Search" value="Search" id="search_btn">
-            </div>
-
-            <div id="banar">
-                <img src="imgs/banar/banner.jpg" alt="">
-            </div>
-        </div>
 
         <div class="cart_banar">
-            <img src="../imgs/banar/details-hero.jpg" alt="">
+            <!-- use in css -->
+            <!-- <img src="../imgs/banar/details-hero.jpg" alt=""> -->
         </div>
 
  <!-- End section Header  -->
@@ -66,78 +115,76 @@
         <thead>
             <tr>
                 <th class="shoping__product">Products</th>
+                <th>Name</th>
                 <th>Price</th>
                 <th>Quantity</th>
                 <th>Total</th>
                 <th></th>
             </tr>
         </thead>
-        <tbody>
-            <!-- <tr>
-                <td class="cart__item">
-                    <img src="../imgs/product/product-1.jpg" alt="">
-                    <h5>Vegetable’s Package</h5>
-                </td>
-                <td class="shoping__cart__price">
-                    $55.00
-                </td>
-                <td class="shoping__cart__quantity">
-                    <div class="quantity">
-                        <div class="product-qty">
-                            <span>-</span>
-                            <input type="text" value="1">
-                            <span>+</span>
-                        </div>
-                    </div>
-                </td>
-                <td class="shoping__cart__total">
-                    $110.00
-                </td>
-                <td class="shoping__cart__item__close">
-                    <span class="icon_close"></span>
-                </td>
-            </tr> -->
-           
-            <!-- <tr>
-                <td class="cart__item">
-                    <img src="../imgs/product/product-2.jpg" alt="">
-                    <h5>Vegetable’s Package</h5>
-                </td>
-                <td class="shoping__cart__price">
-                    $55.00
-                </td>
-                <td class="shoping__cart__quantity">
-                    <div class="quantity">
-                        <div class="product-qty">
-                            <input type="text" value="1">
-                        </div>
-                    </div>
-                </td>
-                <td class="shoping__cart__total">
-                    $110.00
-                </td>
-                <td class="shoping__cart__item__close">
-                    <span class="icon_close"></span>
-                </td>
-            </tr> -->
+        <tbody id="t_body">
+         
 
-    <tr class="cart_checkout">
-
-        <td colspan="3">
-            CART TOTAL
-        </td>
-        <td class="shoping__cart__price">
-            <span>$55.00</span>
-        </td>
-    </tr>
 
         </tbody>
+        <tfoot>
+               <tr class="cart_checkout">
+
+                <td colspan="3">
+                    CART TOTAL
+                </td>
+                <td></td>
+                <td class="shoping__cart__price">
+                    <span id="totalCart"></span>
+                </td>
+            </tr>
+        </tfoot>
     </table>
  
 </div>
 
+
+  
+    <footer id="footer">
+        <div id="footerBlock1">
+            <img src="../images/SP-563.png" style="width:350; height:150px">
+        </div>
+        <div id="footerBlock2"> 
+            <h3>Pages</h3>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">products</a></li>
+                <li><a href="#">sales</a></li>
+                <li><a href="#">Categories</a></li>
+
+            </ul>
+        </div>
+        <div id="footerBlock3">
+            <h3>Contact Us </h3>
+           <div>
+               <P>Adress: ITI Menofia Branch</P>
+               <P>Moblie: <a href='tel:01003209935'>01003209935</a></P>
+               <P>Email:<a href="mailto:info@mohamedmahmoudeg.com">
+                info@mohamedmahmoudeg.com</a></P>
+        </div>
+    </div>
+    </div>
+    <div id="footer-nav">
+        <div>
+            <p>2022 © All Rights Reserved</p>
+        </div>
+        <div id=footer-socials>
+            <a href="facebook"><i></i></a>
+            <a href="facebook"><i></i></a>
+            <a href="facebook"><i></i></a>
+            <a href="facebook"><i></i></a>
+        </div>
+    </div>
+</footer>
+
 <!-- </div>  end div container -->
 
     <script src="../js/cart.js" async defer></script>
+    <script src="../login.js"></script>
 </body>
 </html>
